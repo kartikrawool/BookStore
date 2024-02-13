@@ -1,0 +1,15 @@
+<h2>credit cards:</h2>
+<% current_user.creditcards.each do |creditcard| %>
+  <p>
+    <strong>creditcard number:</strong>
+    <%= creditcard.number %>
+  </p>
+  <p>
+    <strong>creditcard cvv:</strong>
+    <%= creditcard.cvv %>
+  </p>
+  <p>
+    <strong>creditcard expiry:</strong>
+    <%= creditcard.expiry %>
+  </p>
+<% end %>

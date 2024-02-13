@@ -1,0 +1,13 @@
+<h1>Auth#index</h1>
+<p>Find me in app/views/auth/index.html.erb</p>
+
+<% if user_signed_in? %> 
+ <div> Welcome <%= current_user.email %> </div> 
+ <% if current_user.admin? %> 
+   <div> You are an admin </div>
+    <%= button_to 'all user profile', 'user/index' , method: :get %>
+ <%end%>
+<%= button_to 'your profile', user_path(current_user), method: :get %>
+<% else %>
+  <%= button_to 'register', new_user_registration_path, method: :get %>
+<% end %>

@@ -1,0 +1,12 @@
+
+<p> ALL USERS </p>
+<ul>
+    <% @user.each do |user| %>
+        <li>
+            <%= user.email %>
+            <%= render partial: 'singleuser', locals: {user: user, ret: request.path} %>
+            <%= button_to 'edit', edit_user_path(user), method: :get %>
+        </li>
+    <% end %>
+</ul>
+

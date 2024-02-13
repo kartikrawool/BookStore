@@ -1,0 +1,4 @@
+<p> User : <%= current_user.email %> </p>
+ <%= render partial: 'singleuser', locals: {user: current_user, ret: request.path} %>
+<%= button_to 'edit', edit_user_path(current_user), method: :get %>
+<%= render partial: 'usercards' %>

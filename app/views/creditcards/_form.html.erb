@@ -1,0 +1,17 @@
+<%= form_with model: [@user, @user.creditcards.build ] do |f| %>
+  <p>
+    <%= f.label :number %><br>
+    <%= f.text_field :number %>
+  </p>
+  <p>
+    <%= f.label :cvv %><br>
+    <%= f.text_field :cvv %>
+  </p>
+  <p>
+    <%= f.label :expiry %><br>
+    <%= f.text_field :expiry %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<%end%>
